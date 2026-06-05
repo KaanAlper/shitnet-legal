@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHITNET — Gizlilik Politikası</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px 80px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: #c01577; }
+    h2 { margin-top: 2.2rem; color: #1a1a1a; border-bottom: 2px solid #ff2a9d; padding-bottom: 6px; }
+    h3 { margin-top: 1.8rem; }
+    a { color: #c01577; }
+    .meta { color: #666; font-size: 0.9rem; }
+    code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    .lang-switch { margin-bottom: 30px; }
+    .lang-switch a { margin-right: 16px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0a0a0a; color: #eee; }
+      h2 { color: #fff; }
+      code { background: #222; color: #ff2a9d; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <a href="#tr"><strong>Türkçe</strong></a>
+  <a href="#en">English</a>
+</div>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr">
+<h1>SHITNET — Gizlilik Politikası</h1>
+<p class="meta">Son güncelleme: 6 Haziran 2026</p>
+
+<p>
+SHITNET ("biz", "uygulamamız") topluluk-tabanlı bir tuvalet puanlama ve keşif uygulamasıdır.
+Bu politika; mobil uygulama (Android), web sürümü (shitnet.vercel.app) ve ilgili hizmetleri kullanırken
+hangi verileri topladığımızı, nasıl işlediğimizi ve haklarını açıklar.
+</p>
+
+<h2>1. Topladığımız Veriler</h2>
+
+<h3>1.1 Hesap Bilgileri</h3>
+<ul>
+  <li><strong>E-posta adresi</strong> — kayıt için. Doğrulama dışında üçüncü taraflarla paylaşılmaz.</li>
+  <li><strong>Otomatik üretilmiş kullanıcı adı</strong> — Türkçe rastgele kelime kombinasyonu (örn "BoktanLord347"). Hesap kaydında otomatik atanır.</li>
+  <li><strong>Google hesabı bilgileri</strong> (Google ile giriş yaparsanız) — ad, e-posta, profil fotoğrafı URL'si. Google'ın gizlilik politikası ayrıca geçerlidir.</li>
+</ul>
+
+<h3>1.2 İçerik Verileri</h3>
+<ul>
+  <li><strong>Puanlamalar</strong> — verdiğiniz yıldız puanları, donanım bilgileri.</li>
+  <li><strong>Yorumlar</strong> — yazdığınız metin içerikleri.</li>
+  <li><strong>Fotoğraflar</strong> — yüklediğiniz tuvalet fotoğrafları (EXIF GPS verisi dahil).</li>
+  <li><strong>Mekan önerileri</strong> — eklediğiniz yeni mekan bilgileri (ad, koordinat, tip, ilçe, mahalle).</li>
+</ul>
+
+<h3>1.3 Konum Verileri</h3>
+<ul>
+  <li>Yorum/foto eklerken cihaz GPS koordinatları okunur ve mekanın koordinatlarıyla karşılaştırılır ("konum gate" doğrulaması — 500m sınırı).</li>
+  <li>Konum verisi <strong>her yorum/fotoğraf kaydıyla birlikte</strong> doğrulama amaçlı saklanır.</li>
+  <li>Konum sadece etkin kullanım sırasında alınır, arka planda toplanmaz.</li>
+</ul>
+
+<h3>1.4 Otomatik Toplanan Veriler</h3>
+<ul>
+  <li><strong>Cihaz parmak izi (fingerprint)</strong> — anonim kullanıcıların aynı puanı tekrar göndermesini engellemek için.</li>
+  <li><strong>IP adresi</strong> — kötüye kullanım tespiti, rate limiting.</li>
+  <li><strong>Oturum belirteçleri (JWT)</strong> — yetkilendirme için (yerel depolamada).</li>
+</ul>
+
+<h2>2. Verileri Nasıl Kullanıyoruz?</h2>
+<ul>
+  <li>Hizmeti sağlamak: harita gösterimi, puan/yorum yayınlama, foto görüntüleme.</li>
+  <li>Topluluk özellikleri: liderler tablosu (Lordlar), bölgesel ligler, rozet sistemi.</li>
+  <li>Moderasyon: kullanıcı katkılarının onaylanması/reddedilmesi, spam tespiti.</li>
+  <li>Güvenlik: spam, sahte hesap, kötüye kullanım engelleme.</li>
+  <li><strong>Reklam veya pazarlama için kullanılmaz.</strong></li>
+  <li><strong>Üçüncü taraflarla satılmaz.</strong></li>
+</ul>
+
+<h2>3. Verilerin Saklanması ve Üçüncü Taraflar</h2>
+<p>
+Veriler güvenli bulut altyapısında (<strong>Supabase</strong>) saklanır.
+Supabase'in altyapısı Amazon Web Services (AWS) üzerindedir — verileriniz AWS Frankfurt (eu-central-1) bölgesinde tutulur.
+</p>
+<ul>
+  <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Gizlilik Politikası</a></li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a> (OAuth kullanımı için)</li>
+  <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap Lisansı</a> (harita verisi için)</li>
+</ul>
+
+<h2>4. Haklarınız (KVKK & GDPR)</h2>
+<p>Aşağıdaki haklara sahipsiniz:</p>
+<ul>
+  <li><strong>Erişim</strong>: hangi verilerinizi sakladığımızı sormak.</li>
+  <li><strong>Düzeltme</strong>: yanlış verilerin düzeltilmesi.</li>
+  <li><strong>Silme</strong>: hesabınızın ve tüm ilişkili verilerin kalıcı silinmesi.</li>
+  <li><strong>Taşınabilirlik</strong>: verilerinizin makine okunabilir formatta dışa aktarılması.</li>
+  <li><strong>İtiraz</strong>: verilerinizin işlenmesine itiraz etme.</li>
+</ul>
+<p>Bu haklarınızı kullanmak için <a href="mailto:muammer@clonifylabs.com">muammer@clonifylabs.com</a> adresine yazın. 30 gün içinde dönüş yaparız.</p>
+
+<h2>5. Hesap Silme</h2>
+<p>
+Hesabınızı silmek için aşağıdaki yöntemlerden birini kullanın:
+</p>
+<ul>
+  <li>Uygulama içinden: <em>Profil → Çıkış Yap → Tekrar giriş yapmadığınız için hesap 90 gün sonra otomatik dondurulur</em></li>
+  <li>E-posta ile talep: <a href="mailto:muammer@clonifylabs.com?subject=Hesap%20Silme">muammer@clonifylabs.com</a> — konuya "Hesap Silme" yazın, kullanıcı adınızla beraber.</li>
+</ul>
+<p>İsteğinizden sonra 30 gün içinde tüm verileriniz kalıcı silinir.</p>
+
+<h2>6. Çocuklar</h2>
+<p>
+Uygulamamız 13 yaş altı çocuklara yönelik değildir. 13 yaş altı bir kullanıcının veri verdiğini fark edersek hesabını ve verilerini kalıcı sileriz.
+</p>
+
+<h2>7. Politika Değişiklikleri</h2>
+<p>
+Bu politikayı zaman içinde güncelleyebiliriz. Önemli değişikliklerde uygulama içi veya e-posta ile bildirim göndereceğiz.
+Politikanın son sürümü her zaman bu sayfada erişilebilir.
+</p>
+
+<h2>8. İletişim</h2>
+<p>
+<strong>Sorumlu:</strong> Kaan Alper Karaaslan<br>
+<strong>E-posta:</strong> <a href="mailto:muammer@clonifylabs.com">muammer@clonifylabs.com</a><br>
+<strong>Web:</strong> <a href="https://shitnet.vercel.app">shitnet.vercel.app</a>
+</p>
+
+</section>
+
+<hr style="margin: 60px 0;">
+
+<!-- ============ ENGLISH ============ -->
+<section id="en">
+<h1>SHITNET — Privacy Policy</h1>
+<p class="meta">Last updated: June 6, 2026</p>
+
+<p>
+SHITNET ("we", "our app") is a community-driven toilet rating and discovery application.
+This policy explains what data we collect, how we process it, and your rights when using
+the mobile app (Android), web version (shitnet.vercel.app), and related services.
+</p>
+
+<h2>1. Data We Collect</h2>
+
+<h3>1.1 Account Information</h3>
+<ul>
+  <li><strong>Email address</strong> — for registration. Not shared with third parties except for verification.</li>
+  <li><strong>Auto-generated username</strong> — random Turkish word combination (e.g. "BoktanLord347"). Assigned automatically at signup.</li>
+  <li><strong>Google account information</strong> (if you sign in with Google) — name, email, profile photo URL. Google's privacy policy also applies.</li>
+</ul>
+
+<h3>1.2 Content Data</h3>
+<ul>
+  <li><strong>Ratings</strong> — star ratings and equipment details you provide.</li>
+  <li><strong>Comments</strong> — text content you write.</li>
+  <li><strong>Photos</strong> — toilet photos you upload (including EXIF GPS data).</li>
+  <li><strong>Venue submissions</strong> — new venue information (name, coordinates, type, district, neighborhood).</li>
+</ul>
+
+<h3>1.3 Location Data</h3>
+<ul>
+  <li>When adding a comment/photo, device GPS coordinates are read and compared with the venue's coordinates ("location gate" verification — 500m boundary).</li>
+  <li>Location data is stored <strong>alongside each comment/photo record</strong> for verification purposes.</li>
+  <li>Location is only collected during active use, never in the background.</li>
+</ul>
+
+<h3>1.4 Automatically Collected Data</h3>
+<ul>
+  <li><strong>Device fingerprint</strong> — to prevent anonymous users from submitting duplicate ratings.</li>
+  <li><strong>IP address</strong> — for abuse detection and rate limiting.</li>
+  <li><strong>Session tokens (JWT)</strong> — for authorization (stored locally).</li>
+</ul>
+
+<h2>2. How We Use Data</h2>
+<ul>
+  <li>Provide the service: map display, publishing ratings/comments, displaying photos.</li>
+  <li>Community features: leaderboard (Lordlar), regional leagues, badge system.</li>
+  <li>Moderation: approving/rejecting user contributions, spam detection.</li>
+  <li>Security: preventing spam, fake accounts, abuse.</li>
+  <li><strong>Not used for advertising or marketing.</strong></li>
+  <li><strong>Not sold to third parties.</strong></li>
+</ul>
+
+<h2>3. Data Storage & Third Parties</h2>
+<p>
+Data is stored on secure cloud infrastructure (<strong>Supabase</strong>).
+Supabase's infrastructure runs on Amazon Web Services (AWS) — your data is held in AWS Frankfurt (eu-central-1) region.
+</p>
+<ul>
+  <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> (for OAuth)</li>
+  <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap License</a> (for map data)</li>
+</ul>
+
+<h2>4. Your Rights (KVKK & GDPR)</h2>
+<p>You have the following rights:</p>
+<ul>
+  <li><strong>Access</strong>: ask what data we store about you.</li>
+  <li><strong>Correction</strong>: have incorrect data corrected.</li>
+  <li><strong>Deletion</strong>: permanently delete your account and all related data.</li>
+  <li><strong>Portability</strong>: export your data in machine-readable format.</li>
+  <li><strong>Objection</strong>: object to data processing.</li>
+</ul>
+<p>To exercise these rights, write to <a href="mailto:muammer@clonifylabs.com">muammer@clonifylabs.com</a>. We respond within 30 days.</p>
+
+<h2>5. Account Deletion</h2>
+<p>To delete your account:</p>
+<ul>
+  <li>In-app: <em>Profile → Sign Out → Account auto-freezes after 90 days of inactivity</em></li>
+  <li>By email: <a href="mailto:muammer@clonifylabs.com?subject=Account%20Deletion">muammer@clonifylabs.com</a> — subject "Account Deletion", include your username.</li>
+</ul>
+<p>All your data is permanently deleted within 30 days of your request.</p>
+
+<h2>6. Children</h2>
+<p>
+Our app is not intended for children under 13. If we become aware that a user under 13 has provided data, we will permanently delete their account and data.
+</p>
+
+<h2>7. Policy Changes</h2>
+<p>
+We may update this policy over time. For significant changes, we will notify via in-app or email.
+The latest version of the policy is always available on this page.
+</p>
+
+<h2>8. Contact</h2>
+<p>
+<strong>Responsible:</strong> Kaan Alper Karaaslan<br>
+<strong>Email:</strong> <a href="mailto:muammer@clonifylabs.com">muammer@clonifylabs.com</a><br>
+<strong>Web:</strong> <a href="https://shitnet.vercel.app">shitnet.vercel.app</a>
+</p>
+
+</section>
+
+</body>
+</html>
